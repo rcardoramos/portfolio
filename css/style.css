@@ -117,3 +117,84 @@ header .portfolio-row.header-wrap{
     font-weight: 300;
     color: var(--color1)
 }
+
+.portfolio-navbar{
+    display: none;
+
+}
+
+.navbar-toggle i {
+    font-size: 1.25rem;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+/* Responsive nagevation menu */
+
+.portfolio-navbar.show{
+    display: block;
+    position: absolute;
+    background-color: rgb(235, 241, 256);
+    width: 100%;
+    left: 0;
+    top: 60px;
+    padding: 15px;
+    border-top: 5px solid #000;
+    text-align: center;
+}
+
+.portfolio-navbar ul li {
+    display: block;
+}
+
+.portfolio-navbar ul li a{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 45px;
+}
+
+/* Large diice (destockp 768px and up) */
+
+@media (min-width:768px){
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+        text-align: unset;
+        color: var(--color1);
+        font-weight: 600;
+    }
+
+/* header responsive */ 
+
+    header {
+        background-color: transparent;
+        position: absolute;
+        padding: 0 15px;
+    }
+
+    .navbar-toggle i{
+        display: none;
+    }
+
+    .portfolio-navbar{
+        display: block;
+    }
+
+    .portfolio-navbar ul li{
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a{
+        color: var(--color1);
+        line-height: 65px;
+    }
+}
+
+
+
