@@ -156,6 +156,44 @@ header .portfolio-row.header-wrap{
     line-height: 45px;
 }
 
+h1 strong,
+h2 strong {
+    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.about-image {
+    width: 100%;
+    order: 1;
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#about {
+    padding-top: 100px;
+    background-color: var(--bg-color1);
+}
+
+.about-content {
+    align-items: center;
+}
+
+.about-intro{
+    margin: 3rem 0;
+    width: 100%;
+    order: 2;
+    text-align: center;
+}
+
+.about-text h3{
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
 /* Large diice (destockp 768px and up) */
 
 @media (min-width:768px){
@@ -217,44 +255,6 @@ header .portfolio-row.header-wrap{
 }
 
 /* img */
-
-#about {
-    padding-top: 100px;
-    background-color: var(--bg-color1);
-}
-
-.about-content {
-    align-items: center;
-}
-
-.about-intro{
-    margin: 3rem 0;
-    width: 100%;
-    order: 2;
-    text-align: center;
-}
-
-.about-text h3{
-    color: var(--color1);
-    margin-bottom: 10px;
-}
-
-h1 strong,
-h2 strong {
-    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-.about-image {
-    width: 100%;
-    order: 1;
-    position: relative;
-    z-index: 2;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
 
 .about-image::before {
     position: absolute;
