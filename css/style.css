@@ -240,15 +240,19 @@ h2 strong {
 
 /* Hello BUTTON*/
 
-.hello-btn{
+.hello-btn a{
 
     display: inline-block;
     margin: 20px 0;
     padding: 15px 45px;
     color: #FFF;
-    background-color: burlywood;
-    line-height: 20px;
+    background-color: #6366f1;
+    line-height: 30px;
     transform: all 0.3s ease-out 0s;
+}
+
+.hello-btn a:hover{
+    background-color: #293b5f;
 }
 
 /* Large diice (destockp 768px and up) */
