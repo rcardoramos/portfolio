@@ -328,13 +328,13 @@ h2 strong {
   padding: 1rem 2.1rem;
 }
 
-.qualification-content::after{
+.qualification-content::after {
   position: absolute;
   content: "";
   height: 7px;
   width: 7px;
   left: 8px;
-  top:25px;
+  top: 25px;
   transform: rotate(45deg);
   background: #e15;
 }
@@ -347,10 +347,56 @@ h2 strong {
   position: absolute;
   background: #e8e8e8;
 }
-/* MIN 45:03 ------ */
+/* --- SKILL ---  */
 
+/*========== Style For Skills Bar Progress ==========*/
+
+.bar-content {
+  margin-bottom: 15px;
+}
+
+.bar-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.bar-title,
+.bar-percentage {
+  color: var(--color1);
+}
+
+.bar-progress {
+  display: flex;
+  background-color: #e9eeef;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  width: 0;
+  display: flex;
+  position: relative;
+  transition-delay: 0s;
+  transition-delay: 1.5s;
+  background-color: #75a9d6;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.resume-tab.active .progress-bar {
+  animation: progress 1500ms ease-in 1;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+}
 
 /* ---------- END -----------------*/
+
 @media (min-width: 768px) {
   h1 {
     font-size: 4rem;
@@ -406,5 +452,43 @@ h2 strong {
   .about-image {
     width: 40%;
     order: 2;
+  }
+
+  /* ==== resume intro responsible === */
+
+  .resume-intro {
+    width: 50%;
+    padding-right: 6.25rem;
+  }
+
+  .resume-body{
+    width: 50%;
+    margin-top: 0;
+    min-height: 400px;
+  }
+
+  .resume-body h2 {
+    display: none;
+  }
+
+  .resume-heading {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 0 25px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .qualification-content::after{
+    left: -2px;
+  }
+
+  .qualification-content::before{
+    left: 0;
+  }
+  .bar-content {
+    margin-bottom: 0;
   }
 }
