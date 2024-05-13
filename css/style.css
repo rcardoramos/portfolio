@@ -444,6 +444,19 @@ h2 strong {
 .service-card:hover p{
   color: #fff;
 }
+/* ---------- RECENT WORKS -----------------*/
+
+#projects{
+  padding: 60px 0;
+  background-color: var(--bg-color2);
+}
+
+.filter-wrap{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ---------- END -----------------*/
 
