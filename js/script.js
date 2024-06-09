@@ -22,3 +22,24 @@ resumeHeading.onclick = (event) => {
         correspondingTab.classList.add("active");
     }
 };
+
+// Portfolio Filter
+
+const filterContainer = document.querySelector(".portfolio-filter-nav");
+const galleryItems = document.querySelectorAll(".portfolio-item");
+
+filterContainer.addEventListener("click", (e) => {
+    e.preventDefault();
+    filterContainer.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    const filterValue = e.target.getAttribute("data-id");
+    galleryItems.forEach((item) => {
+        if (item.classList.contains(filterValue) || filterValue === "all") {
+            item.classList.remove("hide");
+            item.classList.add("show");
+        } else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+        }
+    });
+});

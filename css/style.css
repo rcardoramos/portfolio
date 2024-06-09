@@ -347,6 +347,7 @@ h2 strong {
   position: absolute;
   background: #e8e8e8;
 }
+
 /* --- SKILL ---  */
 
 /*========== Style For Skills Bar Progress ==========*/
@@ -394,13 +395,14 @@ h2 strong {
     width: 0;
   }
 }
+
 /*  ---- SERVICES SECTION ---- */
 #services {
   padding: 60px 0;
   background-color: var(--bg-color1);
 }
 
-.service-row{
+.service-row {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   gap: 2rem;
@@ -441,29 +443,107 @@ h2 strong {
 
 .service-card:hover .icon,
 .service-card:hover h6,
-.service-card:hover p{
+.service-card:hover p {
   color: #fff;
 }
+
 /* ---------- RECENT WORKS -----------------*/
 
-#projects{
+#projects {
   padding: 60px 0;
   background-color: var(--bg-color2);
 }
 
-.filter-wrap{
+.filter-wrap {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 
+/* ====== Portfolio Gallery RECENTS WORKS ========= */
+
+.portfolio-wrapper {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.portfolio-wrapper .portfolio-col{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portfolio-item.development img{
+  border-radius: 5px;
+  height: 350px;
+}
+
+.portfolio-item.design img{
+  border-radius: 5px;
+  height: 250px;
+}
+
+.portfolio-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio-item.show {
+  animation: fadeIn 4.5s ease;
+}
+
+.portfolio-item.hide {
+  display: none;
+}
+
+.portfolio-item-content {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  background-color: rgba(16, 16, 16, .5);
+  transition: .5s;
+  transform: scale(1.15);
+  opacity: 0;
+}
+
+.product-title{
+  width: 100%;
+  position: absolute;
+  bottom: -45px;
+  padding: 15px 30px;
+  opacity: 0;
+  transition: .6s;
+  text-align: center;
+  color: #fff;
+}
+
+.product-title h4,
+.product-title p{
+  color: #fff;
+}
+
+.portfolio-item:hover .portfolio-item-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-item:hover .product-title {
+  bottom: 30%;
+  opacity: 1;
+}
+/* END RECENT WORKS */
 /* ---------- END -----------------*/
 
 @media (min-width: 768px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 3.5rem;
     text-align: unset;
@@ -551,6 +631,7 @@ h2 strong {
   .qualification-content::before {
     left: 0;
   }
+
   .bar-content {
     margin-bottom: 0;
   }
@@ -559,6 +640,20 @@ h2 strong {
 
   .service-row {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* RECENT WORKS RESPONSIVE */
+
+  .filter-wrap{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* GALERIA IMAGENES RECENT WORKS */
+
+  .portfolio-wrapper {
+    flex-direction: row;
   }
 
 }
