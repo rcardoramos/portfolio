@@ -43,3 +43,37 @@ filterContainer.addEventListener("click", (e) => {
         }
     });
 });
+
+// Send Email
+
+const msg = document.querySelector(".form-message");
+
+(function () {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init("gtoMPBDBY2yXrTCOU");
+})();
+
+window.onload = function () {
+    document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.querySelector(".loader").classList.add("show");
+            // Replace With Your Email Service ID & Contact Form ID Which You Will Get After Registering With EmailJs
+            emailjs.sendForm("service_zwh2p28", "template_1acz4lc", this).then(
+                function () {
+                    document.getElementById("contact-form").reset();
+                    document.querySelector(".loader").classList.remove("show");
+                    msg.innerHTML = "";
+                    msg.innerHTML += "<span class='success-msg'>Email Sent</span>";
+                    msg.classList.add("show");
+                    setTimeout(() => msg.classList.remove("show"), 2000);
+                },
+                function (error) {
+                    document.querySelector(".loader").classList.toggle("show");
+                    msg.classList.add("show");
+                    msg.innerHTML += "<span class='error-msg'>Not Sent ! Sign Up with EmailJS.</span>";
+                }
+            );
+        });
+};

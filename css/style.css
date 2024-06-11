@@ -537,6 +537,166 @@ h2 strong {
   opacity: 1;
 }
 /* END RECENT WORKS */
+
+/* STYLES FOR CONTACT SECTION */
+
+#contact{ 
+  background-color: var(--bg-color1);
+  padding: 60px 0;
+}
+
+.contact-general{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 2rem;
+  margin-bottom: 3 rem;
+
+}
+
+.contact-card{
+  text-align: center;
+}
+
+.contact-card .icon i{
+  font-size: 2.5rem;
+  color: var(--color1);
+}
+
+.contact-content {
+  margin-top: 20px;
+}
+
+.contact-content h5 {
+  font-size: 1rem;
+  color: var(--color1);
+  font-weight: 500;
+}
+
+.contact-content span {
+  color: var(--color1);
+}
+
+/* STYLES FOR CONTACT SECTION END */
+
+
+/* ======= Style For Contact Form ======== */
+
+#contact-form {
+  margin: 2rem auto;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+  color: var(--color1);
+}
+
+.name-email {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-control,
+.contact-msg {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: #f6f6f9;
+  border: 1.5px solid #f6f6f9;
+  border-radius: 5px;
+  color: #3e4455;
+  height: 50px;
+  line-height: 56px;
+  outline: 0;
+  padding: 0 30px;
+  width: 100%;
+  font-weight: 500;
+}
+
+.contact-msg {
+  height: 150px;
+  line-height: 1.2;
+  padding: 20px 30px;
+  resize: none;
+}
+
+.input-subject,
+.form-submit {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px 30px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff5252;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========= Message After Form Submission =======*/
+
+.loader {
+  width: 100%;
+  padding: 10px;
+  background-color: #3d4145;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+.loader.show {
+  display: block;
+}
+
+.loader i {
+  animation: rotateme .4s linear infinite;
+  color: var(--color2);
+}
+
+/*============ Loader animation =========*/
+
+@keyframes rotateme {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.form-message {
+  display: none;
+  width: 100%;
+  background-color: #3d4145;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-message.show {
+  display: block;
+}
+
+.success-msg {
+  color: green;
+  line-height: 3;
+}
+
+.error-msg {
+  color: red;
+  line-height: 3;
+}
+/* /* STYLES TO FORM END */
+
+
+
 /* ---------- END -----------------*/
 
 @media (min-width: 768px) {
@@ -656,4 +816,26 @@ h2 strong {
     flex-direction: row;
   }
 
+  /* CONTAC GENERAL RESPOSIVE */
+
+  .contact-general{
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4rem 0;
+  }
+
+  .contact-general h2{
+    display: none;
+  }
+
+  .contact-card:nth-of-type(2){
+    border-left: 1px solid #d9d9d9d9;
+    border-right: 1px solid #d9d9d9d9;
+  }
+
+    /* ======= Contact Form Responsive ======== */
+
+    #contact-form {
+      margin: 2rem auto;
+      width: 80%;
+  }
 }
